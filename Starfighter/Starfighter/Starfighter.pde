@@ -1,4 +1,4 @@
-//hola
+
 PImage fons ;
 PImage Vader,VaderDefensa,VaderAtac1,VaderAtac2,vader;
 PImage Luke, LukeAtac1, luke,LukeAtac2,LukeDefensa;
@@ -10,7 +10,7 @@ float VidatotalL, VidarestantL;
 int ComptaLuke,ComptaVader;
 void setup() {
   fons=loadImage("Fondo.png");
-  Vader=loadImage("DathVaderParat.png");
+  Vader=loadImage("VaderParat.png");
   Luke=loadImage("LukeRepos.png");
   LukeAtac1=loadImage("LukeAtac1.png");
   LukeAtac2=loadImage("LukeAtac2.png");
@@ -38,6 +38,7 @@ void draw() {
   stroke(255);
   rect(20, 40, 300, 25);
   ComptaLuke++;
+  ComptaVader++;
   if (ComptaLuke==13) {
     luke=Luke;
   }
@@ -77,7 +78,10 @@ if(keyCode==UP){
     vader=VaderAtac1;
     ComptaVader=5;
 }
-
+if(keyCode==DOWN){
+  vader=VaderAtac2;
+  ComptaVader=5;
+}
   if (key=='q') {
     luke=LukeAtac1;
     ComptaLuke=5;
